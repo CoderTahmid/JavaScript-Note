@@ -1,0 +1,50 @@
+Variables in JavaScript.
+
+/* no need to define the variable type like Python and C code */
+/*
+var is a global scope variable
+let is a block scope variable
+const is a block scope variable
+*/
+{
+let name="Tahmid Ibne";
+let age=12;
+let price=123; /* for those values which can be changed */
+const arga="paul"; /* for constant value which is can not be change */
+
+console.log(name);
+console.log(age);
+console.log(price);
+console.log(arga);
+}
+/* we can also write like that, but this thing will only work for "let" it wont work at "const" */
+let a;
+a="43";
+console.log(a);
+
+/* object */
+const student = { /*generally we define obects as "const" type*/
+    fullName: "Tahmid Ibne Mofazzol",
+    ageNew: 15,
+    HSCPass: true,
+    collegeName: " Ideal College, Dhanmondi",
+};
+
+/* access to any perticular key in a object */
+console.log(student.ageNew);
+console.log(student.fullName);
+
+
+/* chagning any key information from a object */
+student["ageNew"] = student["ageNew"] + 100000;
+console.log(student["ageNew"]);
+
+student["fullName"] = "Mushfiqa Afrin Bushra";
+console.log(student["fullName"]);
+
+student.ageNew = student.ageNew + 233525;
+console.log(student.ageNew);
+
+student.fullName = "Tania Akter";
+console.log(student.fullName);
+

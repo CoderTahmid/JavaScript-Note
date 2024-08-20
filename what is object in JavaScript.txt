@@ -1,0 +1,10 @@
+what is object in JavaScript ?
+
+const student = { /*generally we define obects as "const" type*/
+    fullName: "Tahmid Ibne Mofazzol",
+    ageNew: 15,
+    HSCPass: true,
+    collegeName: " Ideal College, Dhanmondi",
+};
+
+here is "student" is an object. Orthat jei ekta variable'r moddhe onekgulo information ekta sathe guccho akare newa hoy shei variable kei object bole.

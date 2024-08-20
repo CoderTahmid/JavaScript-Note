@@ -1,0 +1,147 @@
+/* Events in JavaScript */
+/*web e thaka kono ekta button click korar por muloto kisu ekta changes dekha jay, ekei basically event boleh*/
+/*
+mone rakhte hbe je, inline handling and handling in JS er moddhe,
+JS'r handling ta e karjokor hbe, inline handling ta hbe na
+*/
+
+/*On-click event handler*/
+let button1 = document.querySelector("#button1");
+button1.onclick = () => {
+    console.log("Button 1 was clicked"); /*ekhn oi button ke ekbar click korle ta kisu ekta kaj korbe, ekhane "Button 1 was clicked" eta print korbe*/
+};
+button1.onclick = () => {
+    console.log("Button 1 was clicked king"); /*ekhane event handling'r jonne 2 ta code likha hoiseh, but execute hbe only last'r ta e*/
+};
+
+
+/*On-dblclick event handler*/ 
+let button2 = document.querySelector("#button2");
+button2.ondblclick = () => {
+    console.log("This button was clicked two times"); /*oi button e double click kora hole kono ekta event hbe*/
+};
+
+/*On-mouseover event handler*/
+let div1 = document.querySelector("#div1");
+div1.onmouseover = () => {
+    console.log("Your mouse came inside this div"); /*oi div'r moddhe mouse gele tokhon kono ekta event hbe*/
+};
+
+/*Event Object*/
+/*Event hocche emon ekta object jei object e oi event'r shomporke shokol details thake*/
+button1.onclick = (evt) => {
+    console.log(evt); /*ekhn oi button e click korle ei event tar object print hbe, jei object e kina oi event tar shob details thakbe */
+    console.log(evt.type); /*eta oi event tar type print korbe, orthat event ta click event naki key-board event*/
+    console.log(evt.target);
+    console.log(evt.clientX, evt.clientY); /*eta muloto dekhabe je screen'r x axis and y axis bora bor kon point e event ta hocche*/
+};
+
+button1.addEventListener("click", (evt) => {
+    console.log(evt);
+    console.log(evt.type); 
+    console.log(evt.target);
+    console.log(evt.clientX, evt.clientY);
+});
+
+/*Using Event Listeners event handler*/
+let button3 = document.querySelector("#button3")
+button3.addEventListener("click", () => {
+    console.log("you clicked the button3");
+    /*
+    eta te basically bola hocche je button e "click" korle,
+    ei function ta karjokor hbe
+    */
+});
+
+button3.addEventListener("click", () => {
+    console.log("you clicked the button3 (2) ");
+    /*
+    ekhane uporer code and nicher code 2 ta e execute hbe,
+    so event listeners diye amra same event'r jonne multiple kaj korte parbo
+    */
+});
+
+/*Removing event listeners*/
+let button4 = document.querySelector("#button4");
+
+button4.addEventListener("click", () => {
+    console.log("Wait, you'r PC is getting blast-1");
+});
+button4.addEventListener("click", () => {
+    console.log("Wait, you'r PC is getting blast-2");
+});
+button4.addEventListener("click", () => {
+    console.log("Wait, you'r PC is getting blast-3");
+});
+button4.addEventListener("click", () => {
+    console.log("Wait, you'r PC is getting blast-4");
+});
+button4.removeEventListener("click", () => { /*ekhane obboshoi call back e oi function ta e likhte hbe, jeta remove korte chai*/
+    console.log("Wait, you'r PC is getting blast-4"); 
+});
+    /*
+    tobe ekhane ei code temon kono kaj korbe nah,
+    karon hocche je,
+    ekhane removeEventListener and addEventListener memory teh different different jayga dokhol korse,
+    so bepar ta emon hoy je ekta memory theke delete hoye gele arekta thik e print hoy.
+    */
+
+const deleting_function = () => {
+    console.log("Wait, you'r PC is getting blast-8");
+};
+button4.addEventListener("click", () => {
+    console.log("Wait, you'r PC is getting blast-5");
+});
+button4.addEventListener("click", () => {
+    console.log("Wait, you'r PC is getting blast-6");
+});
+button4.addEventListener("click", () => {
+    console.log("Wait, you'r PC is getting blast-7");
+});
+button4.addEventListener("click", deleting_function);
+button4.removeEventListener("click", deleting_function);
+    /*
+    eta ebar oi event ta ke delete kore dibeh,
+    ekhane ja hocche muloto je,
+    deleting_function ekta same varible e 2ta function e stored hoise,
+    so era memory te same place e dokhol korse,
+    er jonnei muloto code ta execute hocche ekhane
+    */
+
+
+/*********************HTML Code that are supposed to link with it*********************/
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="button1">Click me!</button>
+  <button id="button2">Click me 2 times</button> 
+  <div id="div1">This is a box</div> 
+  <button onclick="console.log('welcome to coding')">Click to code</button> <!-- ebhabe HTML code'r moddhe event handle kora ke bole "inline evnet handling" -->
+  <button id="button3">Click me 2</button>
+  <button id="button4">click to blast your PC</button>
+  <script src="FirstJavaCode.js"></script>
+</body>
+</html>
+
+
+/*********************CSS Code that are supposed to link with it*********************/
+
+
+div{
+    height: 100px;
+    width: 100px;
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid black;
+}
+
+
+  

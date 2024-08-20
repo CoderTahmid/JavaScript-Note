@@ -1,0 +1,58 @@
+/* Functions in JavaScript */
+/*function is basically a block of code that performs a specific task*/
+function myFunction(){
+    console.log("Hello world!");
+    console.log("My name is Tahmid");
+}
+myFunction(); /*now we're using the function*/
+
+function myFunction1(msg){
+    /*ekhane "msg" ta hocche parameter, orthat function definaton'r bhitore jei varible use kora hoy take funtion parameter bole*/
+    console.log(msg);
+}
+myFunction1("I love JS"); /*and ekhane "I love JS" ta hocche function argument, orthat function call e jei varible use kora hocche sheta ke function argument bole*/
+
+function sum(x,y){
+    console.log(x+y);
+}
+sum(9,10); /*this funcion will sum the value of x and y*/
+
+function sum2(){
+    s=5+5;
+    console.log("Tahmid is a good programmer");
+    return s; 
+    /*return ei word dara muloto program ke bola hocche je tomar kaj egula egula and ekhn tmi abar "s" e return koro*/
+    /*ei "return" use korar karone sum2() kinda ekta variable er moto kaj kaj korbe, jar kina value hbe 10. kintu function ke jokhon call kora hbe tokhon thik e only "console.log()" ei code ta e printing'r kaj korbe. karon ei function e print korar jonno sudhu matro ei ekta code e ache*/
+    /*thik e jokhon sum2() variable hishabe use kora hbe instead of calling it, tokhon etar value 10 hbe*/
+}
+sum2(); /*ei line e only "Tahmid is a good programmer" ei tuk e print hbe*/
+console.log(sum2()); /* ei line e "Tahmid is a good programmer" and "10" both e print hbe*/
+console.log(sum2()+sum2()); /*ei line "sum2()" ekta variable hishabe kaj korbe jekhane sum2()+sum2() er result and "Tahmid is a good programmer" eta print hbeh*/
+
+function sum(a,b){
+    /*Here a and b that denoted in the function, is called the parameters of the function*/
+    s=a+b;
+    console.log("before return");
+    return s; 
+    console.log("king"); /*"return" er por ar kono code execute hoy nah*/
+}
+console.log(sum(20,20));
+
+/*Arrow Functions*/
+    /*
+    let guess a function
+    function sum(a,b){
+        return a+b;
+    }
+    now let's convert this function to a arrow function below
+    */
+let arrow_sum_function=(a,b)=>{
+    console.log(a+b);
+}
+arrow_sum_function(1,2);
+
+let arrow_multiplication_funtion=(a,b)=>{
+    console.log(a*b);
+}
+arrow_multiplication_funtion(2,3);
+

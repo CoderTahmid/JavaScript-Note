@@ -1,0 +1,3 @@
+what is Window object in JavaScript?
+
+amra jokhon kono ekta browser open kori tokhon amader jonne bi-default ekta object thake, shetakei basically Window object bole. ek kothay "The window object represents an open window in a browser". ei object ta JS create kore na borong amader jonne amader browser e ei object ta create kore dey. website'r inspect'r console e jeye "window" likhlei ei object ta pawa jabe. amra joto code likhi egula shob ei window object e thakeh.

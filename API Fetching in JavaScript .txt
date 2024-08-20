@@ -1,0 +1,42 @@
+/* API Fetching in JavaScript */
+
+/*
+API = Application Programming Interface
+*/
+
+/*
+API hocche muloto request and response ei cycle'r moddhe chole,
+like bepar ta hocche je
+kono ek random manush'r banano kono server ba website e kisu data stored thakeh,
+for example bola jay kono ekta server e pizza, burger, biriyani bananor recipie aseh,
+amra sekhane request send korih then tara oikhan theke amader data sent koreh,
+pore amra sheta abar response kore amader website e show kori
+*/
+
+/*
+about JSON
+amra kono ekta API ke request send korle sheta amader jei format e data pathay
+oi format tar name e muloto JSON
+JSON = Java Script Object Notation
+*/
+
+/*
+about json() method
+API theke asha data gulo JSON format e thakeh,
+so oita ke amra jodi usabel data te convert korte chai 
+tokhon amader json() method use kora lage
+*/
+
+const URL = "https://cat-fact.herokuapp.com/facts";
+
+(async ()=> {
+    console.log("Getting Data....");
+    let response = await fetch(URL); //kono ekta API ke call kore data niye asha hocche asynchronous kaj, hoite pareh ekhane kichu time lgbe extra, tai ekhane age  "await" boshche 
+    console.log(response);
+    let data = await response.json(); //.json() method tao asynchronous houay ekhane await key use korte hoise, ar ei .json() arekta 2nd promise return kore ty ekhane await keyword use kora hosie
+    console.log(data[2].text); //eta oi data gulor 0'th index'r data text akare print korbe
+    /*
+    jehetu API ekta promise retrun kore,
+    ty eke ekta async function banano hoise
+    */
+})();

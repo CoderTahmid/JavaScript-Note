@@ -1,0 +1,145 @@
+/* Inheritance in JavaScript */
+
+/*
+the basic meaning of inheritance is
+passing down properties and methods from parent class to child class
+*/
+
+class parent {
+    hello() {
+        console.log("Hello");
+    }
+}
+class child {
+    hello() {
+        console.log("Hello");
+    }
+}
+    /*
+    ekhane muloto ja hocche ta holo,
+    amra child class e oi same kaj ta e korte chai ja kina parent class e aseh,
+    so ekhane amke code ta abar repeat kora lagse,
+    programming e code repataion is a bad thing,
+    we should always skip code repeatation.
+    ei repeatation problem solve kortei muloto inheritance'r concept ashche
+    */
+
+class parent1 {
+    hello() {
+        console.log("Hello");
+    }
+};
+class child1 extends parent1 {}; /*ekhane ekta child1 name e class ashche jar moddhe kina parents1'r methods gula thakbe*/
+let obj = new child1();
+console.log(obj.hello()); /*othocho child class e kono hello name'r method e nai, but amra ekhane inheritance'r concept use kore child ke extend kore oi function ta ante partasi*/
+
+
+class person {
+    eat() {
+        console.log("eat healthy foods");
+    }
+
+    sleep() {
+        console.log("sleep properly");
+    }
+
+    work() {
+        console.log("Do shit");
+    }
+}
+class engineer extends person{
+    /*person class'r sobkichu engineer class e inherit hoise ekhane*/
+    /*
+    ekhane child class hocche "engineer"
+    and parent class hocche "person"
+    */ 
+    work() {
+        console.log("Solve problems, build something");
+    }
+}
+
+let engObj = new engineer();
+console.log(engObj);
+console.log(engObj.eat());
+console.log(engObj.sleep());
+console.log(engObj.work());
+    /*
+    ekhane parent child ubhoy class ei work() function aseh
+    but ekhane only kaj korbe child class'r ta
+    that's why e print hoiseh "Solve problems, build something"
+    */
+
+/*Usage of "Super" keyword*/
+
+/*
+sometimes amder emon condition ashe je,
+amader ke directly child class theke parent class'r property te access korte hoy directly,
+like kind of uprer class'r dike jaite hoyh
+tokhon hocche amder ei "super" keyword use korte hbeh
+*/
+
+/*Use in constructor*/
+class person1 {
+    constructor() {
+        this.species = "Homo Sapience";
+    }
+
+    eat() {
+        console.log("Eat");
+    }
+}
+
+class engineer1 extends person1 {
+    constructor(branch) {
+        super();
+        this.branch = branch;
+        /*
+        so ekhane ekta boro concept aseh ei "super" keyword likha nia
+        ekhane muloto dekha jacche je amra child class e ekta constructor create korsi
+        child class theke amra ekta constructor ke call korte chacchi
+        kintu eta ekta child class houay ekhan theke directly kono constructor ke call kora jabe na
+        chil class'r constructor ke call korte hoile age parent class'r constructor ke call korte hbeh
+        so ei parent class'r constructor ke call korar jonnoi muloto ei "super" used hoy
+        */
+    }
+
+    work() {
+        console.log("Solve problem, Build Something");
+    }
+
+    eat() {
+        console.log("Eat healthy foods");
+    }
+}
+let engObj1 = new engineer1("Mechanicaal, Computer Science and Engineering");
+console.log(engObj1);
+
+
+/*Use in other functions*/
+class human {
+    eat() {
+        console.log("eat good food");
+    }
+
+    bath() {
+        console.log("takes bath");
+    }
+}
+
+class king extends human {
+    fight() {
+        super.eat();
+        console.log("King kills enemy");
+        /*
+        ekhn ei king class'r fight ke call korleh
+        age human class'r eat print hbeh
+        pore "king kills enemy" eta print hbeh
+        */
+    }
+
+    buildCity() {
+        console.log("King builds city");
+    }
+}
+let kingObj = new king();
+console.log(kingObj.fight()); /*ekhane age "eat good food" and pore "king kills enemy" print hbeh*/

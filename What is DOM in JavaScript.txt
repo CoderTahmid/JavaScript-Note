@@ -1,0 +1,9 @@
+ What is Document Object Model (DOM) in JavaScript ?
+
+amra joto gulo HTML code likhi amader JS'r sathe attach kore shei shob code gulo amra chailei JS'r code thekei access korte pari,amra chailei HTML code gulo toch korte pari through JS orthat, JS'r moddhe kichu ekta code run kore amra amader written HTML code gulo pabo. To ekhane bepar ta ki hoy exactly ta holo je, ami jei HTML code gulo likhi ta automatically JS'r moddhe eshe ekta object e convert hoye jay and oi special object tar name e hocche muloto "Document". Ei "Document" object tao abar Window object'r ekta part.
+
+to basically window object'r moddhe ekta sub-object thake jar name hocche Document, and ei Document object ta muloto hocche ekta model ba representation of our HTML codes. ty e eta ke DOM (Document Object Model) bola hoy.
+
+in one word DOM is : HTML code JS'r maddhome access kora kei basically DOM bola hoy!
+
+The main function of DOM is making dynamical changes in our webpage.

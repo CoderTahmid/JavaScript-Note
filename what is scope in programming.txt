@@ -1,0 +1,9 @@
+what is scope in programming?
+
+scope bolte bujhay ekta variable ke use korar scope koto tuk 
+like kichu kichu variable ke only ekta block ei use kora jay, eder block scope bole.
+For example : "Let" and "const" type variable gula block type
+
+on the other hand kichu kichu variable ekdom whole wwritten code ei use kora jay, eder global scope bola hoy.
+For example : "var" type variable gulo global scope
+

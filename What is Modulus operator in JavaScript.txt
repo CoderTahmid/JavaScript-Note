@@ -1,0 +1,5 @@
+What is Modulus operator in JavaScript?
+
+jog gun bhag o aro operator er motoi "Modulus" o ekta operator in JS.
+ei operator er kaj hocche bhag-sesh value ta show kora
+for example, 5/2 orthat 5 ke 2 dara bhag korle 1 bhag-sesh thakbe, to ei Modulus operator use korle ei bhag-sesh value 1 show korbeh.

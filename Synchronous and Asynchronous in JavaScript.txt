@@ -1,0 +1,20 @@
+What is Synchronous in JavaScript?
+
+mane hocche 
+amra JS e code korar shomoy jei sequence e code lekhsi shei sequence ei code run hoiseh, for example :
+
+console.log("one");
+console.log("Two");
+console.log("Three");
+
+ekhane age one then two then three, ebhabe print hbeh, ekei muloto Synchronous programming boleh. 
+
+
+
+What is Asynchronous in JavaScript?
+
+eta ke API er example diye bujhte hbeh,
+API hocche muloto emon ekta system (apadoto eto tuk basic e jani) je onno kono website ba onno kono jayga theke request kore data niye ashe.
+so programming korar time e sometimes dekha jay je code'r majhe API call korte hoyh and ei API call process ta hoite bhaloi late hote pareh sometimes, to jodi Asynchronous coding kora hoy ja kina synchronous coding'r ulta tokhon amader subidha hoy.
+
+subidha kibhabe hoy ta holo je, API calling'r kaj cholte thakeh and shei code'r niche thaka code gula run hoite thakeh.

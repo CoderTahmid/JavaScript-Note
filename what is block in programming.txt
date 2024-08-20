@@ -1,0 +1,17 @@
+what is block in programming?
+
+codes jegula {} eder bhitor likha hbe eder block bola hbe
+{
+	let name="Tahmid Ibne";
+	age="12";
+	let price="123"; /* for those values which can be changed */
+	const arga="paul"; /* for constant value which is can not be change */
+
+
+	console.log(name);
+	console.log(age);
+	console.log(price);
+	console.log(arga);
+}	
+
+upre ei {} bracket'r bhitorer code gulo ke ekta block bola hbe
