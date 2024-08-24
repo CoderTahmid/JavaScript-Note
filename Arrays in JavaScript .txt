@@ -158,3 +158,30 @@ const largest_num_of_the_array=numArr6.reduce((prev_val, curr_val) => {
     return prev_val>curr_val ? prev_val:curr_val; /*to ekhane ja hocche je ta holo, prev_val jodi curr_val theke boro hoy tahole prev_val return koro naile curr_val return koro*/
 });
 console.log(largest_num_of_the_array);
+
+/* Spread Operator for arrays */
+
+/*
+spread Operator hocche muloto concat method'r short form,
+concat method ke short kore likhar jonnei muloto spread operator ascheh
+spread operator ke "..." diye likhte hoyh
+*/
+
+const firstRandomArr = [1,2,3];
+const secRandomArr = [4,5,6];
+
+combined = [...firstRandomArr, ...secRandomArr];
+    /*
+    er mane hocche,
+    prothome firstRandomArr ke spread kora hbeh
+    then secRandomArr ke spread kora hbeh
+    pore eder ke add kora hbeh ek satheh 
+    and ekta new variable e store kora hbeh
+    */
+console.log(combined); // Output : [1,2,3,4,5,6]
+
+combined2 = [...firstRandomArr,"a",...secRandomArr];
+console.log(combined2); // Output : [1,2,3,'a',4,5,6]
+
+combined3 = [...firstRandomArr,"a",...secRandomArr,"b"];
+console.log(combined3); // Output : [1,2,3,'a',4,5,6,'b'];
