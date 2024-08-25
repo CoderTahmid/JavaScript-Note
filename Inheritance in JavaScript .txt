@@ -31,7 +31,7 @@ class parent1 {
 };
 class child1 extends parent1 {}; /*ekhane ekta child1 name e class ashche jar moddhe kina parents1'r methods gula thakbe*/
 let obj = new child1();
-console.log(obj.hello()); /*othocho child1 class e kono hello name'r method e nai, but amra ekhane inheritance'r concept use kore child ke extend kore oi function ta ante partasi*/
+console.log(obj.hello()); /*othocho child1 class e kono hello name'r method e nai, but amra ekhane inheritance'r concept use kore child1 ke extend kore oi function ta ante partasi*/
 
 
 class person {
