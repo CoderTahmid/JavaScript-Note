@@ -7,3 +7,15 @@ export class personDoing { // ekhane ei class'r age ekta "export" prefix boshait
         console.log("sleep properly");
     };
 };
+
+/* Default Exports */
+
+export default class engineer{
+    probSolve() {
+        console.log("Solving problem");
+    };
+
+    learn() {
+        console.log("Learn new things");
+    };
+};
