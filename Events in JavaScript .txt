@@ -109,27 +109,121 @@ button4.removeEventListener("click", deleting_function);
     */
 
 
+/* Different types of events */
+
+document.querySelector("#focus-input").addEventListener("focus", () => {
+    console.log("You focused that input field");
+    /*
+    ekhane oi input field ta ke focus korle 
+    console e ekta msg log hbe arki
+    */
+});
+
+document.querySelector("#blur-input").addEventListener("blur", () => {
+    console.log("You blured that input field");
+    /*
+    oi input field ta ke 
+    ekbar focus korar por pore abar onno jaygay click korle (eke muloto blur kora bole arki)
+    tokho console e ekta msg print hbeh
+    */
+});
+
+document.querySelector("#keydown-input").addEventListener("keydown", (event) => {
+    console.log(event.target.value)
+    /*
+    ei keydown keyup egulah use kora hoy muloto
+    kono ekta input field e ki likha hoccheh ta bujhar jonneh
+    so
+    ei code e ja hocche ta holoh
+    keydown e kono ekta function kaj korbeh
+    jar kina ekta parameter aseh, 'event' name e
+    key down bolteh muloto ja bujhay ta holo
+    keyboard'r jekeno key press korar por to sheta niche nameh right?
+    to oita kei muloto keydown bujhay
+
+    but ekhane ei keydown effect ta bujhte ektu hard hbeh
+    etar function a little complex
+
+    to ei code ta jeta kortase
+    sheta hocche je
+    kono ekta key down hoar age 
+    tar input field e ba amra bolte pari tar value ja chiloh 
+    ta print korbeh
+    so lokkho korar bishoy hocche je
+    jokhon prothome amra kono ekta okkhor likhi input field e 
+    tokhon kintu value tah faka thakeh orthat key down houar age value ta faka
+    ty console e " " log hoy
+    and ebhabe input field e new kisu likha hoile oita aste aste ei same pattern mene console e log hoyh
+    */
+});
+
+document.querySelector("#keypress-input").addEventListener("keypress", (event) => {
+    console.log(event.target.value);
+    /*
+    ekhane print hobe hocche 
+    key press korar ageh input field e ki ache sheita
+    mane key press korar ageh input field tar value jeta sheta print hbeh 
+    console e 
+    ekhn prothom okkhor likhar age input field'r value kintu khali e thakeh
+    mane 
+    fist okkhor likhar jonneh kono key press korar purbe input field'r value khali e thakeh
+    press korar por na ekta okkhor asheh
+    so er jonne first console e eekta " " log hoy
+    */
+});
+
+document.querySelector("#keyup-input").addEventListener("keyup", (event) => {
+    console.log(event.target.value);
+    /*
+    ekhaner khela ta ager gula thekeh different kichui nah
+    kon key press korar por ta upre uthe
+    press korle key ta niche nameh
+    then ekai upre uthe 
+    right?
+    to eta kei muloto keyup bola hoccheh
+    ekhn ekhane tahole print hbeh ki?
+    ekhane print hbe hocche 
+    keyup e ashar age jeta input field'r value set hbeh shetai print hbeh
+    ekhn jokhon ekdom first key input dewa hoyh tokhon exactly ki chole?
+    let's explain
+    jokhon ekta first key press kora hoyh
+    tokhon kintu thik e sathe satheh ekta okkhor input field e chole ashe
+    orthat tar value ar " " thake nah 
+    and key upre uthar ageh jei value set hoy input field'r jonneh 
+    oita print hoye jay
+    bas ei e
+    */
+});
+
+
 /*********************HTML Code that are supposed to link with it*********************/
 
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <button id="button1">Click me!</button>
-  <button id="button2">Click me 2 times</button> 
-  <div id="div1">This is a box</div> 
-  <button onclick="console.log('welcome to coding')">Click to code</button> <!-- ebhabe HTML code'r moddhe event handle kora ke bole "inline evnet handling" -->
-  <button id="button3">Click me 2</button>
-  <button id="button4">click to blast your PC</button>
-  <script src="FirstJavaCode.js"></script>
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="button1">Click me!</button>
+    <button id="button2">Click me 2 times</button>
+    <div id="div1">This is a box</div>
+    <button onclick="console.log('welcome to coding')">Click to code</button> <!-- ebhabe HTML code'r moddhe event handle kora ke bole "inline evnet handling" -->
+    <button id="button3">Click me 2</button>
+    <button id="button4">click to blast your PC</button>
+    <input type="text" placeholder="Focus to view focus effect" id="focus-input">
+    <input type="text" placeholder="blur to view focus effect" id="blur-input">
+    <input type="text" placeholder="type to view keydown effect" id="keydown-input">
+    <input type="text" placeholder="type to view keypress effect" id="keypress-input">
+    <input type="text" placeholder="type to view keyup effect" id="keyup-input">
+
+    <script src="FirstJSCode.js"></script>
+  </body>
 </html>
+
 
 
 /*********************CSS Code that are supposed to link with it*********************/
