@@ -57,3 +57,5 @@ console.log(randomNum + parseInt(anotherRandomNum)); // output : 20
     ekhane ei parseInt() method ta anotherRandomNum ke integer e convert korseh
     hence 55 line e output 20 asche
     */
+let aFloatNum = 10.5;
+console.log(parseInt(aFloatNum)); // output: 10, float number ta ke integer e convert korseh
