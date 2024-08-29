@@ -1,4 +1,4 @@
-Variables in JavaScript.
+/* Variables in JavaScript /
 
 /* no need to define the variable type like Python and C code */
 /*
@@ -48,3 +48,12 @@ console.log(student.ageNew);
 student.fullName = "Tania Akter";
 console.log(student.fullName);
 
+/*converting an string to integer*/
+let randomNum = 10;
+let anotherRandomNum = "10";
+console.log(randomNum + anotherRandomNum); // output : 1010
+console.log(randomNum + parseInt(anotherRandomNum)); // output : 20
+    /*
+    ekhane ei parseInt() method ta anotherRandomNum ke integer e convert korseh
+    hence 55 line e output 20 asche
+    */

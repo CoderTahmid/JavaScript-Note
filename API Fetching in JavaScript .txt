@@ -34,7 +34,7 @@ const URL = "https://cat-fact.herokuapp.com/facts";
     let response = await fetch(URL); //kono ekta API ke call kore data niye asha hocche asynchronous kaj, hoite pareh ekhane kichu time lgbe extra, tai ekhane age  "await" boshche 
     console.log(response);
     let data = await response.json(); //.json() method tao asynchronous houay ekhane await key use korte hoise, ar ei .json() arekta 2nd promise return kore ty ekhane await keyword use kora hosie
-    console.log(data[2].text); //eta oi data gulor 0'th index'r data text akare print korbe
+    console.log(data[0].text); //eta oi data gulor 0'th index'r data text akare print korbe
     /*
     jehetu API ekta promise retrun kore,
     ty eke ekta async function banano hoise

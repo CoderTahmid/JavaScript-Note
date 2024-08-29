@@ -32,6 +32,43 @@ function calculator(a, b, sumCallback) {
 }
 
 calculator(1,2,sum);
+    /*
+    so what's going on here
+    prothome ekta function define kora hoiseh
+    jar name hocche sum
+    ei sum'r moddhe 2 ta variable pass kora hoiseh
+    ekta hocche a and arekta hoccheh b
+    ei a and b ke obbosho parameter o bole
+    now ei sum() function tar kaj hocche je a+b kora
+
+    then arekta new function calculator() define kora hoiseh
+    and ei calculator() function e 3 ta variable or parameter dewa hoiseh
+    ekta hocche a arekta b and last one hocche sumCallback
+    now ei calculator() function'r kaj hoccheh sumCallback parameter tar aro 2 ta parameter save kora
+    and ei calculator() function ta ty e korloh 
+    sumCallback() e 2 ta parameter pass korseh, 
+    jegula hocche a and b
+
+    now! amra jodi next line(line 34) code e ashi 
+    tahole ekhane ekta chomotkar bishoy gotseh sheta hoio je
+    oikhane sum() = sumCallback() hoye geseh
+    well how? 
+    now let's explain
+    34 number line e calculator() e 3 ta value pass kora hoiseh
+    ekta hocche 1 arekta 2 and arekta hoccheh sum
+    and ei value gula kintu pass kora hoiseh purbo defined parameter' upre base koreh
+    orthat 
+    a = 1
+    b = 2
+    sumCallback() = sum()
+    ekhn bola jay jeh sumCallback() er kaj hobe sum() function'r kaj jeta sheta
+    and sum() function'r kaj hocche jaya console e a+b print korah
+
+    so etakeh muloto callback bola hoyh
+    like
+    ek function'r bhitore arek function ke call kora 
+    and eder moddhe ebhabe internally variables pass kora
+    */
 
 /*
 .
