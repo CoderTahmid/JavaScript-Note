@@ -55,4 +55,21 @@ let age2=12;
 let result = age2>=25?"You are adult":"You are not adult";
 console.log(result);
 
+/* Complex Condition */
+
+let salary = 25000;
+let hasCar = true;
+let isBCS = true;
+
+if((salary > 25000 && hasCar == true) || isBCS == true) {
+        console.log("shu patro");
+}
+
+if((salary > 25000 || hasCar == true) && isBCS == true) {
+    console.log("shu patro")
+}
+    /*
+    this is how we will write complex conditions
+    */
+
 
