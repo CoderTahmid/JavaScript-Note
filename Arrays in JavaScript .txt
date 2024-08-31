@@ -159,6 +159,18 @@ const largest_num_of_the_array=numArr6.reduce((prev_val, curr_val) => {
 });
 console.log(largest_num_of_the_array);
 
+/*includes method*/
+/*
+ei method'r kaj hoccche je 
+array te search kore ekta nirdishto value ke khuje ber korah
+jodi khuje pay output hbeh true otherwise output will be false
+*/
+let friends = ["rifat", "maruf", "siam", "ayon"];
+console.log(friends.includes("rifat")); // output : true
+console.log(friends.includes("Rifat")); // output : false
+console.log(friends.includes("king")); // output : false
+
+
 /* Spread Operator for arrays */
 
 /*

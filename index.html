@@ -10,21 +10,7 @@
     <input  type="text" name="" id="delete-confirm" placeholder="pleae type delete" />
     <button id="btn-delete" disabled>Delete</button>
 
-    <script>
-        document.getElementById("delete-confirm").addEventListener("keyup", (event) => {
-            const text = event.target.value;
-            const deleteButton = document.getElementById("btn-delete");
-            if(text === "delete") {
-                deleteButton.removeAttribute("disabled");
-            }
-            else {
-                deleteButton.setAttribute("disabled", true);
-            }
-        })
-      document.getElementById("btn-delete").addEventListener("click", () => {
-        const secret = document.getElementById("secret-info");
-        secret.style.display = "none";
-      });
+    <script src="FirstJSCode.js">
     </script>
   </body>
 </html>
