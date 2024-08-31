@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubble</title>
+    <style>
+      .li-items:hover{
+        cursor: pointer;
+      }
+      .li-items:active{
+        color: red  ;
+      }
+      ol{
+        border: 2px solid tomato;
+      }
+      body{
+        border: 2px solid green;
+      }
+      section{
+        border: 2px solid blue  ;
+      }
+      #item-2{
+        border: 2px solid rebeccapurple;
+      }
+      #item-3{
+        border: 2px solid orangered;
+      }
+      #item-4{
+        border: 2px solid cadetblue;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <h1>Exploring Event Bubble</h1>
+    <section id="list-container">
+      <ol id="list-ul">
+        <li id="item-1" class="li-items">Lorem, ipsum.</li>
+        <li id="item-2" class="li-items">A, consequatur.</li>
+        <li id="item-3" class="li-items">Dicta, sequi?</li>
+        <li id="item-4" class="li-items">Vel, maxime?</li>
+        <li id="item-5" class="li-items">Quisquam, nihil?</li>
+        <li id="item-6" class="li-items">Nesciunt, asperiores.</li>
+      </ol>
+    </section>
+    <script>
+      document.getElementById("item-2").addEventListener("click", () => {
+        console.log("Item 2 clicked");
+      });
+
+      document.getElementById("list-ul").addEventListener("click", () => {
+        console.log("ul clicked");
+      })
+
+      document.getElementById("list-container").addEventListener("click", () => {
+        console.log("section container clicked");
+      })
+
+      document.getElementById("body").addEventListener("click", () => {
+        console.log("body of the HTML clicked");
+      })
+        /*
+        so ekhane ki hoccheh
+        item 2 ke click korar por eta first e dekhe tar uprer parent ta te kono event ase kinah
+        then sheta ke execute kore
+        ebhabe tar 1st parent dekeh je tar upre aro parent e event ase kinah
+        then shei item-2 er 2nd parent'r event ta execute hoyh
+        eta keih muloto bola hoyh event bubble
+        */
+      document.getElementById("item-3").addEventListener("click", (event) => {
+        console.log("Item 3 clicked");
+        event.stopPropagation();
+        /*
+        ekhane Item 3 er jonneh 
+        ei bubble effect ta off kora holoh
+        mane
+        item 3 te click korleh
+        oita ar uprer dike uthbe nah
+        mane 
+        item 3 te click korleh only item 3 te set korah event e execute hbeh
+        oita ar tar parent'r events gula ke execute korbe nah
+        */
+      });
+      document.getElementById("item-4").addEventListener("click", (event) => {
+        console.log("Item 4 1st clicked");
+        event.stopImmediatePropagation();
+      })
+      document.getElementById("item-4").addEventListener("click", (event) => {
+        console.log("Item 4 2nd clicked");
+        event.stopImmediatePropagation();
+        /*
+        stopImmediatePropagation() ei method tah kinda stopPropagation() er motoi
+        stopPropagation() method e hoccheh kono element'r parent element gularh event off hoye jabeh
+        and stopImmediatePropagation() mane
+        jeta te stopImmediatePropagation() method use kora hbeh 
+        only oitai cholbeh 
+        oitar ashe pasher sister element gula off hoye jabeh
+        tobe muloto oi code'r niche likha sister element gular propagation off hoyh
+        uprer tar thakeh 
+        */
+      })
+      document.getElementById("item-4").addEventListener("click", () => {
+        console.log("Item 4 3rd clicked");
+      })
+      document.getElementById("item-4").addEventListener("click", () => {
+        console.log("Item 4 4th clicked");
+      })
+    </script>
+  </body>
+</html>
