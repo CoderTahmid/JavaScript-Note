@@ -1,0 +1,58 @@
+/* Objects in JavaScript */
+
+/*Declaration of an object*/
+const student = { /*generally we define obects as "const" type*/
+    fullName: "Tahmid Ibne Mofazzol",
+    ageNew: 15,
+    HSCPass: true,
+    collegeName: " Ideal College, Dhanmondi",
+    'fav places': ['bandarban', 'saintmartin', 'kuakata']
+    /*
+    here is "student" is an object.
+    Orthat jei ekta variable'r moddhe onekgulo information ekta sathe guccho akare newa hoy
+    shei variable kei object bole.
+
+    here fullName, ageNew, HSCPass egula ke property bola hoyh
+    mane bepar ta kinda emon je
+    ekta property
+    jar key hocche fullName and value hoccheh Tahmid Ibne Mofazzol
+    key = ageNew, value = 15
+    */
+};
+
+/*Accessing in object's properties*/
+/*property access kora jay koyekta way te*/
+console.log(student.fullName); // output : Tahmid Ibne Mofazzol 
+console.log(student['fullName']); // output : Tahmid Ibne Mofazzol
+console.log(student["fav places"]); // output : [ 'bandarban', 'saintmartin', 'kuakata' ]   
+
+/*Accessing keys of an object*/
+const computer = {
+    brand: 'lenovo',
+    price: '35000',
+    processor: 'intel',
+    hdd: '512gb'
+}
+const keys = Object.keys(computer);
+console.log(keys); // output : [ 'brand', 'price', 'processor', 'hdd' ]
+
+/*Accessing values of an object*/
+const values = Object.values(computer);
+console.log(values); // output : [ 'lenovo', '35000', 'intel', '512gb' ]
+
+/*Nested object*/
+const college = {
+    name: 'vnc',
+    class: ['11', '12'],
+    events: ['science fair', 'victory day', '21 Feb'],
+    unique: {
+        color: 'blue',
+        result: {
+            gpa: '5',
+            merit: 'top most'
+        }
+    }
+}
+console.log(college.unique); // output : { color: 'blue' }
+console.log(college.unique.color) // output : blue
+console.log(college.unique.result.gpa); // output : 5
