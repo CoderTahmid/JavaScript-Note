@@ -76,3 +76,11 @@ console.log(sentence.split('a')); // output : [ 'I w', 'nn', ' be ', ' good prog
     same as before
     jekhane jekhane a paise bhag kore diseh
     */
+
+/*Join method*/
+/*eta mulot ekta arrya'r element gula ke join korayh*/
+const friends = ['rahim', 'kahim', 'fahim', 'mahim', 'sahim'];
+console.log(friends.join()); // output : rahim,kahim,fahim,mahim,sahim
+console.log(friends.join('|')); // output : rahim|kahim|fahim|mahim|sahim
+console.log(friends.join('-')); // output : rahim-kahim-fahim-mahim-sahim
+
