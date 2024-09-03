@@ -1,6 +1,3 @@
-/*Join method*/
-/*eta mulot ekta arrya'r element gula ke join korayh*/
-const friends = ['rahim', 'kahim', 'fahim', 'mahim', 'sahim'];
-console.log(friends.join()); // output : rahim,kahim,fahim,mahim,sahim
-console.log(friends.join('|')); // output : rahim|kahim|fahim|mahim|sahim
-console.log(friends.join('-')); // output : rahim-kahim-fahim-mahim-sahim
+const randomName = 'tahmid';
+console.log(randomName.includes('d')); // output : true
+console.log(randomName.includes('x'));

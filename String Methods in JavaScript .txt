@@ -84,3 +84,9 @@ console.log(friends.join()); // output : rahim,kahim,fahim,mahim,sahim
 console.log(friends.join('|')); // output : rahim|kahim|fahim|mahim|sahim
 console.log(friends.join('-')); // output : rahim-kahim-fahim-mahim-sahim
 
+/*Includes method*/
+/*eta kinda array'r jei include method ta aseh oitar motoi*/
+const randomName = 'tahmid';
+console.log(randomName.includes('d')); // output : true , string ta te 'd' ase er jonnei true
+console.log(randomName.includes('x')); // output : false, string ta te 'x' naih er jonnei false
+
