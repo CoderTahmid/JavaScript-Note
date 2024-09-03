@@ -45,3 +45,34 @@ console.log(str7.replace("Tah","Lam"));
 let str8="hellolololo";
 console.log(str8.replace("lo","DD")); /*Only the first "lo" will be replaced*/
 console.log(str8.replaceAll("lo","DD")) /*This will replace all the "lo"*/
+
+/*Split method*/
+/*eita kono ekta string'r every character ke alada kore ekta array create korbeh*/
+let sentence = 'I wanna be a good programmer';
+console.log(sentence.split()); // output : [ 'I wanna be a good programmer' ]
+console.log(sentence.split(''));
+    /*
+    output : 
+    [
+    'I', ' ', 'w', 'a', 'n', 'n',
+    'a', ' ', 'b', 'e', ' ', 'a',
+    ' ', 'g', 'o', 'o', 'd', ' ',
+    'p', 'r', 'o', 'g', 'r', 'a',
+    'm', 'm', 'e', 'r'
+    ]
+    */
+console.log(sentence.split(' ')); // output : [ 'I', 'wanna', 'be', 'a', 'good', 'programmer' ]
+    /*
+    ekhane just ekta space dewa hoiseh split() method'r bhitore
+    to eita oi sentence'r space gula ke dhoira coma boshaya 
+    array toiri kore felseh
+    and every word becomes an array element
+    kinda like emon je
+    jekhane jekhane space khuje pabe 
+    sekhane sekhane bhag kore dibeh
+    */
+console.log(sentence.split('a')); // output : [ 'I w', 'nn', ' be ', ' good progr', 'mmer' ]
+    /*
+    same as before
+    jekhane jekhane a paise bhag kore diseh
+    */
