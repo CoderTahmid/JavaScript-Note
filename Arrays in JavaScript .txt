@@ -38,7 +38,7 @@ cities.forEach(city_func=(city, i, arr) => {
     console.log(city.toUpperCase(), i, arr); /*for-each loop's first parameter hoy array'r value gulo, 2nd parameter hoy value gulor index, 3rd parameter hoy array nijei*/
 });
 
-/**Array  Methods**/
+/****Array Methods****/
 
 /*Push method*/
 /*Push sadharonoto programming a add kora ortho bujhay*/
@@ -177,8 +177,68 @@ eta simply just array ta ke ultaya dey
 let numbers = [1,2,3,4,5,6];
 console.log(numbers.reverse()); // output : [ 6, 5, 4, 3, 2, 1 ]
 
+/****Array Sorting****/
+/*
+array sorting 2 bhabe hoy
+Ascending and descending 
+*/
 
-/* Spread Operator for arrays */
+/*ascending sort*/
+
+const randomStrings1 = ['rakib', 'nokib', 'sakib', 'akib', 'dakib', 'anis'];
+console.log(randomStrings1.sort()); // output : [ 'akib', 'anis', 'dakib', 'nokib', 'rakib', 'sakib' ]
+    /*
+    output e "akib" age ashar karon ki?
+    why not "anis" comes at first
+    karon hoccheh
+    ekhane dekhte hbe je
+    first okkhor "a" hoileo
+    porer okkhor ta ki
+    porer ta hocche ekta name e "k" and arekta te "n"
+    english Alphabet e "k" age ashe "n" thekeh
+    er jonneh output e "akib" age print hoiseh
+    pore "anis"
+    */
+
+const randomStrings2 = ['rakib', 'nokib', 'sakib', 'akib', 'anis', 'Anis'];
+console.log(randomStrings2.sort()); // output : [ 'Anis', 'akib', 'anis', 'nokib', 'rakib', 'sakib' ]
+    /*
+    ager output e thik e kintu "Anis" age ashar karon hocche je
+    "Anis" er first okkhor uppercase e ase ty
+    uppercase gula age count kore JS
+    */
+
+const randomStrings3 = ['rakib', 'nokib', 'sakib', 'akib', 'Pakib', 'anis', 'Anis'];
+console.log(randomStrings3.sort());
+    /*
+    ekhane output e age "Anis" then "Pakib" 
+    ashche
+    ekhane JS jebhabe sorting kortase ta holo je
+    age dekhbe string gular moddhe kontar prothoom okkhor uppercase e ase
+    tader age boshabe 
+    then dekhbe je uppercase gular moddheh
+    kon english okkhor ta age ashe
+    take boshabe
+    that's why e "Anis" age then "Pakib"
+    */
+
+const randomNums = [4,1,3,9,8];
+console.log(randomNums.sort()); // output : [ 1, 3, 4, 8, 9 ]
+
+const randomNums1 = [4,1,12,112,34,24,5];
+console.log(randomNums1.sort());
+    /*
+    number sort korar kinda string sort korar formula tei hoy
+    age dekhbe first okkkhor ta 
+    jodi 1 hoy tahole sheta age ashbeh
+    er jonne output e 1 age 
+    then 112
+    then 12
+    same theory as string sort korar
+    */
+
+
+/****Spread Operator for arrays****/
 
 /*
 spread Operator hocche muloto concat method'r short form,

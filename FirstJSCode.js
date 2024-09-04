@@ -1,2 +1,2 @@
-let numbers = [1,2,3,4,5,6];
-console.log(numbers.reverse());
+const randomNums1 = [4,1,12,112,34,24,5];
+console.log(randomNums1.sort());
