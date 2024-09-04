@@ -67,3 +67,47 @@ const college = {
 console.log(college.unique); // output : { color: 'blue' }
 console.log(college.unique.color) // output : blue
 console.log(college.unique.result.gpa); // output : 5
+
+/*Object destructing*/
+/*
+object destructing hocche muloto emon ekta process
+jar maddhome
+kono ekta object'r property gula ke bar bar use kora jay easily
+*/
+const actor = {
+    actorName: 'Ananta',
+    age: 30,
+    phone: '01724424214',
+    money: 324235252,
+}
+
+const {actorName} = actor;
+console.log(actorName); // output : Ananta
+    /*
+    so ekhane ja hocche ta holo je
+    amra property name ke as a variable hishabe nicchi
+    and oi varibale ke console korlei
+    oi object'r oi property'r value ta pawa jabeh
+    */
+const {money} = actor;
+console.log(money); // output : 324235252
+
+const actor2 = {
+    actorName2: 'Ananta Tambuk',
+    age2: 330,
+    phone2: '01724424214',
+    money2: 324235252,
+}
+const {actorName2, age2, money2} = actor2; // We can also write it like this
+console.log(actorName2); // output : Ananta Tambuk
+console.log(age2); // output : 330
+
+const actor3 = {
+    actorName3: 'Ananta Tambuk',
+    age3: 330,
+    phone3: '01724424214',
+    money3: 324235252,
+}
+const {age3: boyosh3} = actor3; // ebhabeo Declare kora possible  
+// console.log(age3); // output : error
+console.log(boyosh3); // output : 330
