@@ -78,7 +78,7 @@ console.log(sentence.split('a')); // output : [ 'I w', 'nn', ' be ', ' good prog
     */
 
 /*Join method*/
-/*eta mulot ekta arrya'r element gula ke join korayh*/
+/*eta muloto ekta arrya'r element gula ke join korayh*/
 const friends = ['rahim', 'kahim', 'fahim', 'mahim', 'sahim'];
 console.log(friends.join()); // output : rahim,kahim,fahim,mahim,sahim
 console.log(friends.join('|')); // output : rahim|kahim|fahim|mahim|sahim
