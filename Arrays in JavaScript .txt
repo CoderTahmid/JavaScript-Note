@@ -170,6 +170,13 @@ console.log(friends.includes("rifat")); // output : true
 console.log(friends.includes("Rifat")); // output : false
 console.log(friends.includes("king")); // output : false
 
+/*reverse method*/
+/*
+eta simply just array ta ke ultaya dey
+*/
+let numbers = [1,2,3,4,5,6];
+console.log(numbers.reverse()); // output : [ 6, 5, 4, 3, 2, 1 ]
+
 
 /* Spread Operator for arrays */
 

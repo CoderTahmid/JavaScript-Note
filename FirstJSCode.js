@@ -1,8 +1,2 @@
-let student = {
-    name: 'Ariana Grande',
-    age: 21,
-    city: 'Gaibandha',
-    isStudent: true
-};
-const key = Object.values(student);
-console.log(key.length);
+let numbers = [1,2,3,4,5,6];
+console.log(numbers.reverse());
