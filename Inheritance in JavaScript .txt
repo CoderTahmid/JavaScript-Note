@@ -78,6 +78,50 @@ like kind of uprer class'r dike jaite hoyh
 tokhon hocche amder ei "super" keyword use korte hbeh
 */
 
+/*Primary use of "super" keyword*/
+class Vehicle{
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    };
+    move() {
+        console.log('Gari chole na chole na chole na re');
+    };
+};
+
+class Bus extends Vehicle{
+    constructor(name, price, seat, ticketPrice) {
+        super(name, price);
+            /*
+            ekhane "Vehicle" ta hocche parent class
+            and "Bus" ta hoccheh child class
+            to ei child class theke parent class'r constructor ke call kora hoiseh
+            er jonneih muloto ekhane "super()" ashche
+            */
+        this.seat = seat;
+        this.ticketPrice = ticketPrice;
+    };
+    route() {
+        console.log('Dhaka to Tangail');
+    };
+};
+
+class Truck extends Vehicle{
+    constructor(name, price, load){
+        super(name, price);
+        this.load = load;
+        /*
+        ekhane same reason ei super() ke daka hoiseh
+        mane parent class theke constructor ke call korar jonnoi muloto 
+        super() use hoy
+        etai hocche er basic concept
+        */
+    };
+    time() {
+        console.log('only night');
+    };
+};
+
 /*Use in constructor*/
 class person1 {
     constructor() {
@@ -98,7 +142,7 @@ class engineer1 extends person1 {
         ekhane muloto dekha jacche je amra child class e ekta constructor create korsi
         child class theke amra ekta constructor ke call korte chacchi
         kintu eta ekta child class houay ekhan theke directly kono constructor ke call kora jabe na
-        chil class'r constructor ke call korte hoile age parent class'r constructor ke call korte hbeh
+        child class'r constructor ke call korte hoile age parent class'r constructor ke call korte hbeh
         so ei parent class'r constructor ke call korar jonnoi muloto ei "super" used hoy
         */
     }
@@ -111,7 +155,7 @@ class engineer1 extends person1 {
         console.log("Eat healthy foods");
     }
 }
-let engObj1 = new engineer1("Mechanicaal, Computer Science and Engineering");
+let engObj1 = new engineer1("Mechanical, Computer Science and Engineering");
 console.log(engObj1);
 
 
