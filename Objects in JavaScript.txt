@@ -24,7 +24,24 @@ const student = { /*generally we define obects as "const" type*/
 /*property access kora jay koyekta way te*/
 console.log(student.fullName); // output : Tahmid Ibne Mofazzol 
 console.log(student['fullName']); // output : Tahmid Ibne Mofazzol
-console.log(student["fav places"]); // output : [ 'bandarban', 'saintmartin', 'kuakata' ]   
+console.log(student["fav places"]); // output : [ 'bandarban', 'saintmartin', 'kuakata' ]
+
+/*Nested object*/
+const college = {
+    name: 'vnc',
+    class: ['11', '12'],
+    events: ['science fair', 'victory day', '21 Feb'],
+    unique: {
+        color: 'blue',
+        result: {
+            gpa: '5',
+            merit: 'top most'
+        }
+    }
+}
+console.log(college.unique); // output : { color: 'blue' }
+console.log(college.unique.color) // output : blue
+console.log(college.unique.result.gpa); // output : 5
 
 /*Accessing keys of an object*/
 /*
@@ -51,22 +68,28 @@ ekta object'r value gula ke array te convert kora jay ei trick e
 const values = Object.values(computer);
 console.log(values); // output : [ 'lenovo', '35000', 'intel', '512gb' ]
 
-/*Nested object*/
-const college = {
-    name: 'vnc',
-    class: ['11', '12'],
-    events: ['science fair', 'victory day', '21 Feb'],
-    unique: {
-        color: 'blue',
-        result: {
-            gpa: '5',
-            merit: 'top most'
-        }
-    }
-}
-console.log(college.unique); // output : { color: 'blue' }
-console.log(college.unique.color) // output : blue
-console.log(college.unique.result.gpa); // output : 5
+/*Accessing values and keys at once*/
+const glass = {
+    name: 'glass',
+    color: 'golden',
+    price: '12',
+    isCleaned: true
+};
+const pair = Object.entries(glass);
+console.log(pair);
+    /* output : 
+    [
+        [ 'name', 'glass' ],
+        [ 'color', 'golden' ],
+        [ 'price', '12' ],
+        [ 'isCleaned', true ]
+    ]
+    so eta basically ekta 2D / 2 Dimensional array print koreh
+    */
+
+/*Deleting a property from an object*/
+delete glass.isCleaned;
+console.log(glass); // output : { name: 'glass', color: 'golden', price: '12' }
 
 /*Object destructing*/
 /*
@@ -111,3 +134,4 @@ const actor3 = {
 const {age3: boyosh3} = actor3; // ebhabeo Declare kora possible  
 // console.log(age3); // output : error
 console.log(boyosh3); // output : 330
+
