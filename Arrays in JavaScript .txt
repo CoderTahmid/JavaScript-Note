@@ -152,8 +152,8 @@ console.log(selected); // output : 75 | 72 kintu ashe naih
 
 /*Redure method*/
 /*reduce method'r kaj hocche to perform some operations and reduce the array to a single value, for example array'r value gulor jogfol or average*/
-let numArr6=[1,2,3,4];
-const sum_of_numArr6=numArr6.reduce((result, current_value) => {
+let numArr6 = [1,2,3,4];
+const sum_of_numArr6 = numArr6.reduce((result, current_value) => {
     return result+current_value;
     /*
     reduce emon ekta method je eita first e array'r prothom value ta ke pick korbe and parameter e dewa first varible e ta store korbe.
