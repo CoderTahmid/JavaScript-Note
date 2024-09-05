@@ -88,19 +88,3 @@ console.log(lexus2);
     upre created fotuner and lexus object'r jonne emon kisu hbe nah,
     karon oder constructor function empty
     */
-
-/*Some example to understand "this" keyword properly*/
-class Teacher{
-    constructor(name, subject){
-        this.name = name;
-        this.subject = subject;
-    }
-    lecture(){
-        console.log('Sir is teaching Math');
-    }
-}
-const tapan = new Teacher('Shahjahan Tapan', 'Physics');
-console.log(tapan); // output : Teacher { name: 'Shahjahan Tapan', subject: 'Physics' }
-
-const bozlu = new Teacher('Bozlur Rahman', 'Biology');
-console.log(bozlu); // output :  Teacher { name: 'Bozlur Rahman', subject: 'Biology' }
