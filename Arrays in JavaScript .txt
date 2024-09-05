@@ -35,7 +35,7 @@ arr.forEach(my_func=(val) => {
 });
 let cities=["Dhaka","Tangail","Mumbai","Ghatarchar"];
 cities.forEach(city_func=(city, i, arr) => {
-    console.log(city.toUpperCase(), i, arr); /*for-each loop's first parameter hoy array'r value gulo, 2nd parameter hoy value gulor index, 3rd parameter hoy array nijei*/
+    console.log(city.toUpperCase(), i, arr); /*for-each loop's first parameter array'r value gulo, 2nd parameter value gulor index, 3rd parameter array nijei*/
 });
 
 /****Array Methods****/
