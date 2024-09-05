@@ -135,3 +135,37 @@ const {age3: boyosh3} = actor3; // ebhabeo Declare kora possible
 // console.log(age3); // output : error
 console.log(boyosh3); // output : 330
 
+/*Optional Chaining*/
+
+const user = {
+    id: 5001,
+    name: 'Shoriful Raj',
+    address: {
+        street: {
+            first: '54/1 uttor side',
+            second: 'poribag er goli',
+            third: 'no dorai'
+        },
+        city: 'Dhaka'
+    }
+};
+
+const user2 = {
+    id: 5002,
+    name: 'Tony Stark',
+    address: {
+        city: 'Chittagong',
+        country: 'Bangladesh'
+    }
+}
+console.log(user.address.street.second); // output : poribag er goli
+// console.log(user2.address.street.second); // output : error
+console.log(user2.address.street?.second); // output : undefined, this time at least error khabo na
+    /*
+    and ebhabe question mark dewa kei muloto optional chaining boleh
+    mane bepar ta emon hbe je
+    jodi 'street' er man pawa jay 
+    tahole shamne agao
+    ar naile undefined print koroh
+    */
+console.log(user.address.street?.second); // output : poribag er goli, karon ekhane 'street' pawa geseh
