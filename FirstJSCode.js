@@ -1,11 +1,10 @@
-const friends = ['tom', 'john', 'rifat', 'bushra'];
-const lengths = friends.map(frnd => frnd.length);
-console.log(lengths);
-
-const firstLetter = friends.map(firstOkkho => firstOkkho[0]);
-console.log(firstLetter);
-
-let cities=["Dhaka","Tangail","Mumbai","Ghatarchar"];
-cities.forEach(city_func=(city, i, arr) => {
-    console.log(city.toUpperCase(), i, arr); /*for-each loop's first parameter hoy array'r value gulo, 2nd parameter hoy value gulor index, 3rd parameter hoy array nijei*/
-});
+/*Find method*/
+/*
+filter method hocche je je je condition complete korbe she shobaikei nibeh
+kintu find hocche ektu tar different
+find'r khetre je je condition puron korbe tader shobaike na niye
+only prothom ta ke nibe
+*/
+const playerHeight = [75, 65, 67, 72, 55, 59];
+const selected = playerHeight.find(player => player > 70);
+console.log(selected); // output : 75 | 72 kintu ashe naih
