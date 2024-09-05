@@ -276,3 +276,21 @@ console.log(...firstRandomArr); // output : 1 2 3
 const arrToFindMaxNum = [1,23,45,32,232,143,2422,243];
 const maxVal = Math.max(...arrToFindMaxNum);
 console.log(maxVal); // output : 2422
+
+/****Array Destruction****/
+/*
+array destruction is kinda Higher math's matrix concept
+*/
+function doubleThem(a, b){
+    return [a*2, b*2];
+}
+const [prothom, ditiyo] = doubleThem(2, 3);
+    /*
+    doubleThem() eta 2 ta element shoho ekta array return koreh
+    line 287 e shei element gula ke jothakrome prothom and ditiyo name dewa hoiseh
+    then shegula ke console e log kora hoise
+    exactly ebhabei array destruction korte hoyh
+    */
+console.log(prothom, ditiyo); // output : 4 6
+
+
