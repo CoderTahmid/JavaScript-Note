@@ -86,12 +86,14 @@ function loadUsers() {
     .then(res => res.json())
     .then(data => displayUsers(data));
     /*
-    amra ebhabe ekhane arekta function keo chaile
-    call korte pari 
-    then amader iccha moto particular tasks complete korte parih
+    ebhabe amra jekono function pass kore diye 
+    amra amder mon moto kaj korte parih
+    mane bepar ta hocche je
+    jodi API ta successfully ashe
+    tahole amra amader mon moto ei kaj ta korbo
     */
 };
+
 function displayUsers(data) {
     console.log(data);
-};
-
+}
