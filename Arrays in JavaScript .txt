@@ -72,10 +72,10 @@ console.log(concatedArray3);
 
 /*Unshift method*/
 /*Unsift method is almost similar to the "push" method*/
-/*push method jemon last e new info add kore, temon unsift method first e ekta new information add kore*/
+/*push method jemon last e new element add kore, temon unsift method first e ekta new element add kore*/
 let collegeNames=["ICD","DCC","DC"];
 collegeNames.unshift("MKC");
-console.log(collegeNames);
+console.log(collegeNames); // output : [ 'MKC', 'ICD', 'DCC', 'DC' ]
 
 /*Shift method*/
 /*Shift method is similar to the pop method*/
