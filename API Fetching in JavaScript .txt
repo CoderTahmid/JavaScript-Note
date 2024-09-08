@@ -27,7 +27,7 @@ so oita ke amra jodi usabel data te convert korte chai
 tokhon amader json() method use kora lage
 */
 
-const URL = "https://cat-fact.herokuapp.com/facts";
+const URL = "https://jsonplaceholder.typicode.com/users";
 
 (async ()=> {
     console.log("Getting Data....");
@@ -73,3 +73,17 @@ console.log(shopJSON);
 /*Converting a JSON data to object*/
 const shopObj = JSON.parse(shopJSON);
 console.log(shopObj); // Now it will output the main object 
+
+/*Fetching API and loading data from another server from Internet*/
+function loadData() {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(res => res.json())
+    .then(data => console.log(data));
+};
+
+function loadUsers() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    .then(data => console.log(data));
+};
+
