@@ -1,9 +1,12 @@
-function loadUsers() {
-    fetch('https://jsonplaceholder.typicode.com/users')
+const loadComments = () => {
+    fetch('https://jsonplaceholder.typicode.com/comments')
     .then(res => res.json())
-    .then(data => displayUsers(data));
+    .then(data => console.log(data))
+    .catch(error => console.error('Error happend', error));
 };
 
-function displayUsers(data) {
+const loadComments2 = async() => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/comments');
+    const data = await res.json();
     console.log(data);
 }
