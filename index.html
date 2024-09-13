@@ -6,68 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <section id="container">
-      <div>
-        <h1>Create custom error using try and catch</h1>
-        <div>
-          <input type="text" id="age" placeholder="Enter age between 18 - 30" />
-          <button onclick="checkAge()" type="submit">Submit</button>
-          <p id="error"></p>
-        </div>
-      </div>
-    </section>
 
-    <script>
-      function checkAge() {
-        const ageField = document.getElementById("age");
-        const ageText = ageField.value;
-        // console.log(bBaria);
-        // try{
-
-        // }
-        // catch(err) {
-        //     console.log('Error : ', err);
-        // };
-        // console.log(1111);
-        //     /*
-        //     ebhabe jodi ei code ta run kora hoyh
-        //     tahole error dibe
-        //     ar last e jei console.log(1111)
-        //     line ta aseh
-        //     oita execute hbe na
-
-        //     */
-
-        try {
-          const age = parseInt(ageText);
-
-          if (isNaN(age)) {
-            throw "Please enter e number";
-            /*
-            ei throw ta 'catch' block'r kase jabe
-            then ei error msg ta throw korbe arki
-            'catch' er moddhe thaka err parameter ta
-            ei throw'r msg ta as a argument nibe
-            then oi block e thaka baki kaj gula chalabe
-            */
-          }
-        } catch (err) {
-          console.log("Error : ", err);
-        } finally {
-          console.log("All done inside try catch");
-          /*
-        'finally' block e thaka code gula 
-        error hoileo kaj korbeh 
-        error na hoileo kaj korbe
-        */
-        }
-        console.log(1111);
-        /*
-        line 24 e error show korleo 
-        baki codes gula execute hbeh
-        jemon line 28 thik e execute hbeh
-        */
-      }
-    </script>
+    <script src="FirstJSCode.js"></script>
   </body>
 </html>
