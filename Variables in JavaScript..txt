@@ -48,7 +48,7 @@ console.log(student.ageNew);
 student.fullName = "Tania Akter";
 console.log(student.fullName);
 
-/*converting an string to integer*/
+/*converting a string to integer*/
 let randomNum = 10;
 let anotherRandomNum = "10";
 console.log(randomNum + anotherRandomNum); // output : 1010
@@ -59,3 +59,8 @@ console.log(randomNum + parseInt(anotherRandomNum)); // output : 20
     */
 let aFloatNum = 10.5;
 console.log(parseInt(aFloatNum)); // output: 10, float number ta ke integer e convert korseh
+
+/*Shortcut for converting a string into integer*/
+const input = '560';
+const inputNum = +input;
+console.log(inputNum); // Now it will print as an integer

@@ -56,9 +56,13 @@ let deletedItem = foodItems.pop();
 console.log(foodItems); /*this will delete the "pizza" from the main array*/
 console.log(`the deleted item is ${deletedItem}`);
 
-/*To String method*/
+/*toString method*/
 /*muloto ekta array ke array format e print e na kore string form e print koranoi ei method'r kaj*/
 console.log(heros.toString());
+/*Shortcut of toString method*/
+const num1 = 3434;
+const num1Str = num1 + '';
+console.log(num1Str); // Now it will print like a string
 
 /*Concat method*/
 /*Concat korle main array change hoy nah, new ekta variable newa lage*/
