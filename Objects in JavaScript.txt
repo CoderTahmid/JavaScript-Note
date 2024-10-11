@@ -91,6 +91,17 @@ console.log(pair);
 delete glass.isCleaned;
 console.log(glass); // output : { name: 'glass', color: 'golden', price: '12' }
 
+/*Freezing an object*/
+Object.freeze(glass)
+glass.source = 'Bangladesh'; // ekhane glass object e new ekta property add kora hoise, jar key = source & value = Bangladesh
+console.log(glass);
+    /*
+    output : { name: 'glass', color: 'golden', price: '12' }
+    ekhane glass ta ke freeze kore deway oi new property ta add hoy naih
+    same way te ei glass object theke kono property remove o kora jabe na 
+    mane amra onek time e delete kori 'delete' keyword diye
+    */
+
 /*Object destructing*/
 /*
 object destructing hocche muloto emon ekta process

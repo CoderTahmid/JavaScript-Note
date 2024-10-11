@@ -105,6 +105,8 @@
       document.getElementById("item-4").addEventListener("click", () => {
         console.log("Item 4 4th clicked");
       })
+
+      document.getElementsByClassName
     </script>
   </body>
 </html>
