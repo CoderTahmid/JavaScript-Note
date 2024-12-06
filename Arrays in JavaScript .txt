@@ -257,6 +257,27 @@ then 12
 same theory as string sort korar
 */
 
+const randomNums2 = [4, 1, 12, 112, 34, 24, 5];
+console.log(randomNums2.sort((a, b) => a - b)); // output : [1, 4, 5, 12, 24, 34, 112]
+/*
+ekhane array ta finally sort hoise correct bhabe 
+so ekhane dekha jacche je 
+amra sort() function'r bhitore ekta call back function pass korsi
+eta basically Custom comparator function bola hoy arki
+ekhn ei sort() kibhabe array element gula ke sort kore
+eta JS'r internal bishoy 
+JS'r V8 engine eta kore thake
+internally tar bishoy
+shei concept e ar na jai
+*/
+
+/*Descending sort*/
+const randomNums3 = [4, 1, 12, 112, 34, 24, 5];
+console.log(randomNums3.sort((a, b) => b - a)); // output : [112, 34, 24, 12, 5, 4, 1]
+/* 
+just mone rakhte hbe jeh
+descending order e sajaite chaile (b- a) kora lgbeh
+*/
 
 /****Spread Operator for arrays****/
 
